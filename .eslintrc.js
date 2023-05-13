@@ -11,5 +11,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'global-require': 'off',
+    'import/no-dynamic-require': 'off',
+    'no-console': 'off',
   },
 };
