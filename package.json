@@ -6,7 +6,8 @@
   "author": "Qwiddle <andjruben@gmail.com>",
   "license": "MIT",
   "scripts":{
-    "watch": "nodemon src/index.js"
+    "watch": "nodemon src/index.js",
+    "deploy:commands": "node src/deploy-commands.js"
   },
   "devDependencies": {
     "eslint": "^7.32.0 || ^8.2.0",
