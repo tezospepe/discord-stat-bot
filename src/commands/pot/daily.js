@@ -9,7 +9,10 @@ const data = new SlashCommandBuilder()
 
 const execute = async (interaction) => {
   const potStatistics = await getPot(getStartOfDay().toISOString());
-  const post = stageWagerPost('Pepe Prize Pot Daily Statistics 🐸', potStatistics);
+
+  const postHeader = `Pepe Prize Pot Daily Statistics 🐸\n${getStartOfDay().toUTCString()}`;
+
+  const post = stageWagerPost(postHeader, potStatistics);
 
   await interaction.reply(post);
 };
