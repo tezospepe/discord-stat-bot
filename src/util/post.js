@@ -23,7 +23,10 @@ const stageWagerPost = (header, potStatistics) => {
 const stageTokenPost = (header, tokenStatistics) => {
   const { holders, price } = tokenStatistics;
 
-  const postContent = `Price: ${price}ꜩ\nHolders: ${holders}`;
+  const usdPrice = `💰 USD Price: $ ${price.usd}`;
+  const xtzPrice = `💸 XTZ Price: ꜩ ${price.xtz}`;
+
+  const postContent = `👨‍👩‍👧‍👧 Holders: ${holders}\n\n${xtzPrice}\n${usdPrice}`;
   const post = generatePost(header, postContent);
 
   return post;
