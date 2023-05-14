@@ -3,7 +3,7 @@ const { truncateMiddle } = require('./address');
 const wagersToTextList = (wagers) => {
   let list = '';
 
-  wagers.forEach((degen, index) => {
+  wagers.slice(0, 25).forEach((degen, index) => {
     const user = degen[0];
     const stats = degen[1];
 

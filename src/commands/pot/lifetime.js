@@ -10,7 +10,7 @@ const data = new SlashCommandBuilder()
 
 const execute = async (interaction) => {
   const potStatistics = await getPot();
-  const post = stageWagerPost('Pepe Prize Pot Lifetime Statistics 🐸', potStatistics);
+  const post = stageWagerPost('Pepe Prize Pot Lifetime Statistics (top 25) 🐸', potStatistics);
 
   await interaction.reply(post);
 };
