@@ -14,7 +14,7 @@ const stageWagerPost = (header, potStatistics) => {
   const { wagers, totalBurned } = potStatistics;
   const wagerList = wagersToTextList(wagers);
 
-  const postContent = `Burned: ${totalBurned}\n\n${wagerList}`;
+  const postContent = `🔥 Burned: ${totalBurned}\n\n${wagerList}`;
   const post = generatePost(header, postContent);
 
   return post;

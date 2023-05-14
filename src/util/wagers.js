@@ -3,11 +3,15 @@ const { truncateMiddle } = require('./address');
 const wagersToTextList = (wagers) => {
   let list = '';
 
-  wagers.forEach((degen) => {
+  wagers.forEach((degen, index) => {
     const user = degen[0];
     const stats = degen[1];
 
     const userAddress = truncateMiddle(user, 12);
+
+    if (index === 0) {
+      list += '👑 ';
+    }
 
     list += userAddress;
     list += ` Bets: ${stats.bets}, Wagered: ${stats.amount}\n`;
