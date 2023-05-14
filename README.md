@@ -2,7 +2,7 @@
 discord bot to provide daily statistics on the Tezos Pepe token
 
 ## usage
-- clone repo `git clone ...`
+- clone repo `git clone https://github.com/tezospepe/discord-stat-bot.git`
 - install deps `yarn`
 - create test bot account. follow [this](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot) guide
 - setup necessary env variables in .env -- model after the example provided in `.env.example`.
