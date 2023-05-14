@@ -20,7 +20,20 @@ const stageWagerPost = (header, potStatistics) => {
   return post;
 };
 
+const stageTokenPost = (header, tokenStatistics) => {
+  const { holders, price } = tokenStatistics;
+
+  const usdPrice = `💰 USD Price: $ ${price.usd}`;
+  const xtzPrice = `💸 XTZ Price: ꜩ ${price.xtz}`;
+
+  const postContent = `👨‍👩‍👧‍👧 Holders: ${holders}\n\n${xtzPrice}\n${usdPrice}`;
+  const post = generatePost(header, postContent);
+
+  return post;
+};
+
 module.exports = {
   generatePost,
   stageWagerPost,
+  stageTokenPost,
 };
