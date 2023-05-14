@@ -11,7 +11,6 @@ const execute = async (interaction) => {
   const potStatistics = await getPot(getStartOfDay().toISOString());
 
   const postHeader = `Pepe Prize Pot Daily Statistics 🐸\n${getStartOfDay().toUTCString()}`;
-
   const post = stageWagerPost(postHeader, potStatistics);
 
   await interaction.reply(post);
